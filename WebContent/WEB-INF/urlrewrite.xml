@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewrite>
+	<!-- con nằm đầu cha nằm sau nên có tiền tố trong rule -->
+	<rule>
+	 	<from>/cat/(.*)-([0-9]+)/page-([0-9]+)</from>
+	 	<to>/cat?id=$2&amp;pageid=$3</to>
+	</rule>
+	<rule>
+		<from>/detail/(.*)-([0-9]*)</from>
+		<to>/detail?id=$2</to>
+	</rule>
+	<rule>
+		<from>/cat/(.*)-([0-9]*)</from>
+		<to>/cat?id=$2</to>
+	</rule>
+	<rule>
+		<from>/search/page-([0-9]*)</from>
+		<to>/search?pageid=$1</to>
+	</rule>
+	<rule>
+		<from>/index/page-([0-9]*)</from>
+		<to>/index?pageid=$1</to>
+	</rule>
+</urlrewrite>
